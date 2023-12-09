@@ -1,0 +1,181 @@
+<!DOCTYPE HTML><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- saved from url=(0074)https://www.rushb.net/csgo-hitbox-bullet-hit-show-command.html/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="https://apps.bdimg.com/">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-title" content="CSGO RushB中文网">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<title>CSGO显示Hitbox模型、子弹命中位置控制台指令-CSGO RushB中文网</title>
+<link rel='dns-prefetch' href='https://apps.bdimg.com/' />
+<link rel='dns-prefetch' href='../default.htm' />
+<link rel='dns-prefetch' href='https://s.w.org/' />
+<link rel='stylesheet' id='_bootstrap-css'  href='../wp-content/themes/dux/css/bootstrap.min.cssver5.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_fontawesome-css'  href='../wp-content/themes/dux/css/font-awesome.min.cssver5.1.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='../wp-content/themes/dux/css/main.cssver5.1.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js?ver=5.1'></script>
+<link rel='https://api.w.org/' href='../wp-json/default.htm' />
+<link rel='prev' title='查找CSGO职业选手的Steam、社交媒体账号' href='../csgo-pro-player-steam-id-links.html/default.htm' />
+<link rel='next' title='Magisk鼠标键盘外设、视频设置、准心CFG参数' href='../magisk-pro-setting.html/default.htm' />
+<link rel="canonical" href="default.htm" />
+<link rel='shortlink' href='default.htm' />
+<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embedurlhttps_253a_252f_252fwww.rushb.net_252fcsgo-hi~1.html" />
+<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embedurlhttps_253a_252f_252fwww.rushb.net_252fcsgo-hi~1.xml" />
+<meta name="keywords" content="bullethit, csgo, Hitbox, 击中, 判定, 启用, 命令, 子弹命中, 打开, 指令, 控制台, 显示, 模型, 蓝色框, CSGO指令命令, CSGO教程攻略">
+<meta name="description" content="所谓Hitbox，就是玩家能够命中并造成伤害的模型范围。CSGO拥有众多人物角色，不管是CT还是T，都是使用同样的Hitbox。正常游戏下，Hitbox并不可见，玩家只能看到人物模型，另外Hitbox并非和人物模型100%贴合，有些模型边缘位置看着打中了但实际上并没有命中Hitbox，也就没有造成伤害；同理，反过来只要命中Hitbox就算看着没有命中就能造成伤害。  *游戏缺陷和服务器延迟也会导致">
+<style>a:hover, .site-navbar li:hover > a, .site-navbar li.active a:hover, .site-navbar a:hover, .search-on .site-navbar li.navto-search a, .topbar a:hover, .site-nav li.current-menu-item > a, .site-nav li.current-menu-parent > a, .site-search-form a:hover, .branding-primary .btn:hover, .title .more a:hover, .excerpt h2 a:hover, .excerpt .meta a:hover, .excerpt-minic h2 a:hover, .excerpt-minic .meta a:hover, .article-content .wp-caption:hover .wp-caption-text, .article-content a, .article-nav a:hover, .relates a:hover, .widget_links li a:hover, .widget_categories li a:hover, .widget_ui_comments strong, .widget_ui_posts li a:hover .text, .widget_ui_posts .nopic .text:hover , .widget_meta ul a:hover, .tagcloud a:hover, .textwidget a, .textwidget a:hover, .sign h3, #navs .item li a, .url, .url:hover, .excerpt h2 a:hover span, .widget_ui_posts a:hover .text span, .widget-navcontent .item-01 li a:hover span, .excerpt-minic h2 a:hover span, .relates a:hover span{color: #555555;}.btn-primary, .label-primary, .branding-primary, .post-copyright:hover, .article-tags a, .pagination ul > .active > a, .pagination ul > .active > span, .pagenav .current, .widget_ui_tags .items a:hover, .sign .close-link, .pagemenu li.active a, .pageheader, .resetpasssteps li.active, #navs h2, #navs nav, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary, .tag-clouds a:hover{background-color: #555555;}.btn-primary, .search-input:focus, #bdcs .bdcs-search-form-input:focus, #submit, .plinks ul li a:hover,.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{border-color: #555555;}.search-btn, .label-primary, #bdcs .bdcs-search-form-submit, #submit, .excerpt .cat{background-color: #555555;}.excerpt .cat i{border-left-color:#555555;}@media (max-width: 720px) {.site-navbar li.active a, .site-navbar li.active a:hover, .m-nav-show .m-icon-nav{color: #555555;}}@media (max-width: 480px) {.pagination ul > li.next-page a{background-color:#555555;}}.post-actions .action.action-like{background-color: #555555;}.catleader h1{border-left-color: #555555;}pre {
+white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;
+}
+.article-content a:hover span{color: #45B6F7;}</style><link rel="shortcut icon" href="../favicon.ico">
+<!--[if lt IE 9]><script src="../wp-content/themes/dux/js/libs/html5.min.js"></script><![endif]-->
+</head>
+<body class="post-template-default single single-post postid-2283 single-format-standard m-excerpt-cat site-layout-2 text-justify-on">
+<header class="header">
+	<div class="container">
+		<div class="logo"><a href="../default.htm" title="RushB中文网-反恐精英全球攻势中文网站-CSGO中文网"><img src="../wp-content/uploads/2018/10/rushblogo.png" alt="RushB中文网-反恐精英全球攻势中文网站-CSGO中文网">CSGO RushB中文网</a></div>		<div class="brand">RushB中文网
+<br>CSGO / 反恐精英：全球攻势</div>		<ul class="site-nav site-navbar">
+			<li id="menu-item-15" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-15"><a title="CSGO新闻资讯" href="../csgo-news/default.htm">新闻资讯</a></li>
+<li id="menu-item-3886" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-3886"><a title="CSGO教程攻略" href="../csgo-course/default.htm">教程攻略</a>
+<ul class="sub-menu">
+	<li id="menu-item-4542" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4542"><a title="CSGO指令命令" href="../csgo-course/csgo-console-commands/default.htm">CSGO指令命令</a></li>
+</ul>
+</li>
+<li id="menu-item-51" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-51"><a title="CSGO比赛信息" href="../csgo-matchs/default.htm">比赛信息</a></li>
+<li id="menu-item-16" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16"><a title="CSGO更新日志" href="../csgo-updates-log/default.htm">更新日志</a></li>
+<li id="menu-item-52" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-52"><a title="CSGO资源壁纸" href="../csgo-resources-wallpapers/default.htm">资源壁纸</a></li>
+<li id="menu-item-55" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-55"><a title="CSGO创意工坊" href="../csgo-workshop/default.htm">创意工坊</a></li>
+<li id="menu-item-433" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-433"><a title="CSCO经典攻势" href="../csco/default.htm">经典攻势</a></li>
+<li id="menu-item-5883" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-5883"><a title="CSGO职业选手外设、设置指令" href="../pro-player-settings/default.htm">选手设置</a></li>
+							<li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+					</ul>
+				<div class="topbar">
+			<ul class="site-nav topmenu">
+											</ul>
+					</div>
+						<i class="fa fa-bars m-icon-nav"></i>
+			</div>
+</header>
+<div class="site-search">
+	<div class="container">
+		<form method="get" class="site-search-form" action="https://www.rushb.net/" ><input class="search-input" name="s" type="text" placeholder="输入关键字" value=""><button class="search-btn" type="submit"><i class="fa fa-search"></i></button></form>	</div>
+</div>	<div class="breadcrumbs">
+		<div class="container">当前位置：<a href="../default.htm">CSGO RushB中文网</a> <small>></small> <a href="../csgo-course/default.htm">CSGO教程攻略</a> <small>></small> <a href="../csgo-course/csgo-console-commands/default.htm">CSGO指令命令</a> <small>></small> 正文</div>
+	</div>
+<section class="container">
+	<div class="content-wrap">
+	<div class="content">
+				<header class="article-header">
+			<h1 class="article-title"><a href="default.htm">CSGO显示Hitbox模型、子弹命中位置控制台指令</a></h1>
+			<div class="article-meta">
+				<span class="item">2019-08-06</span>
+												<span class="item">分类：<a href="../csgo-course/csgo-console-commands/default.htm" rel="category tag">CSGO指令命令</a> / <a href="../csgo-course/default.htm" rel="category tag">CSGO教程攻略</a></span>
+				<span class="item post-views">阅读(14959)</span>				<span class="item">评论(0)</span>
+				<span class="item"></span>
+			</div>
+		</header>
+				<article class="article-content">
+			
+			
+			
+			
+			
+						<p>所谓Hitbox，就是玩家能够命中并造成伤害的模型范围。CSGO拥有众多人物角色，不管是CT还是T，都是使用同样的Hitbox。正常游戏下，Hitbox并不可见，玩家只能看到人物模型，另外Hitbox并非和人物模型100%贴合，有些模型边缘位置看着打中了但实际上并没有命中Hitbox，也就没有造成伤害；同理，反过来只要命中Hitbox就算看着没有命中就能造成伤害。</p>
+<p>*游戏缺陷和服务器延迟也会导致Hitbox和人物模型不一致。</p>
+<p>本文将介绍用于在单机模式或自建服务器启用显示Hitbox模型和子弹命中位置的控制台指令参数，让玩家能够了解相关内容。</p>
+<p>接下来，进入游戏，打开控制台，如果你不知道如何启用控制台的话：</p>
+<p>使用控制台命令需要打开控制台功能，进入游戏——“设置”——“游戏设置”——“游戏”——“启用开发者控制台（~）”，选择“是”，之后按“~”键（ESC下面）即可打开控制台功能。</p>
+<p><img class="alignnone size-medium wp-image-1364" src="../wp-content/uploads/2019/05/csgoconsole.png" alt="" width="600" height="269" data-tag="bdshare" /></p>
+<p>在单机模式下或自建服务器进入地图，打开控制台输入以下命令进入Cheat模式，并让Bot静止不动</p>
+<pre>sv_cheats 1;bot_stop 1;</pre>
+<p>接着输入以下命令：</p>
+<p>显示Hitbox模型</p>
+<pre>sv_showlagcompensation 1</pre>
+<p>显示子弹命中位置</p>
+<pre>sv_showbullethits 1</pre>
+<p>准备工作完成，接下来在随便一个BOT附近射击，BOT身上就会显示蓝色框的Hitbox模型（持续几秒钟），如果子弹命中人物，便会显示红色的箭头表示命中位置和方向，如果未命中则显示为灰色，几秒后消失。</p>
+<p><img class="alignnone size-full wp-image-2284" src="../wp-content/uploads/2019/08/hitbox7.png" alt="" width="700" height="706" /></p>
+<p>部分人物部位的Hitbox比看起来的模型要大些，比如下图的凤凰战士特定视角下，准心瞄准的是空气，但仍有命中判定。</p>
+<p><img class="alignnone size-medium wp-image-2285" src="../wp-content/uploads/2019/08/hitbox5-820x347.png" alt="" width="820" height="347" srcset="../wp-content/uploads/2019/08/hitbox5.png 820w, ../wp-content/uploads/2019/08/hitbox5-768x325.png 768w" sizes="(max-width: 820px) 100vw, 820px" /></p>
+<p>大部分人物模型，手臂的Hitbox实际比看起来的大，所以瞄准手臂边缘也能够造成伤害。</p>
+<p><img class="alignnone size-full wp-image-2286" src="../wp-content/uploads/2019/08/hitbox3.png" alt="" width="650" height="621" /></p>
+<p>反过来，只要没有命中Hitbox，就算命中模型也不会有伤害判定，比如下图特定视角下的CT角色GSG9，命中手臂并没有造成伤害。</p>
+<p><img class="alignnone size-medium wp-image-2287" src="../wp-content/uploads/2019/08/hitbox9-820x407.png" alt="" width="820" height="407" srcset="../wp-content/uploads/2019/08/hitbox9.png 820w, ../wp-content/uploads/2019/08/hitbox9-768x381.png 768w" sizes="(max-width: 820px) 100vw, 820px" /></p>
+		</article>
+								            <div class="post-actions">
+            	<a href="javascript:;" etap="like" class="post-like action action-like" data-pid="2283"><i class="fa fa-thumbs-o-up"></i>赞(<span>19</span>)</a>            	            	            </div>
+        		<div class="post-copyright">未经允许不得转载：<a href="../default.htm">CSGO RushB中文网</a> &raquo; <a href="default.htm">CSGO显示Hitbox模型、子弹命中位置控制台指令</a></div>		
+					<div class="action-share"></div>
+		
+		<div class="article-tags">标签：<a href="../tag/bullethit.htm" rel="tag">bullethit</a><a href="../tag/csgo/default.htm" rel="tag">csgo</a><a href="../tag/hitbox.htm" rel="tag">Hitbox</a><a href="../tag/_25e5_2587_25bb_25e4_25b8_25ad.htm" rel="tag">击中</a><a href="../tag/_25e5_2588_25a4_25e5_25ae_259a.htm" rel="tag">判定</a><a href="../tag/_25e5_2590_25af_25e7_2594_25a8.htm" rel="tag">启用</a><a href="../tag/_25e5_2591_25bd_25e4_25bb_25a4/default.htm" rel="tag">命令</a><a href="../tag/_25e5_25ad_2590_25e5_25bc_25b9_25e5_2591_25bd_25e4_25b8_25ad.htm" rel="tag">子弹命中</a><a href="../tag/_25e6_2589_2593_25e5_25bc_2580/default.htm" rel="tag">打开</a><a href="../tag/_25e6_258c_2587_25e4_25bb_25a4/default.htm" rel="tag">指令</a><a href="../tag/_25e6_258e_25a7_25e5_2588_25b6_25e5_258f_25b0/default.htm" rel="tag">控制台</a><a href="../tag/_25e6_2598_25be_25e7_25a4_25ba/default.htm" rel="tag">显示</a><a href="../tag/_25e6_25a8_25a1_25e5_259e_258b.htm" rel="tag">模型</a><a href="../tag/_25e8_2593_259d_25e8_2589_25b2_25e6_25a1_2586.htm" rel="tag">蓝色框</a></div>
+		
+		
+		            <nav class="article-nav">
+                <span class="article-nav-prev">上一篇<br><a href="../csgo-pro-player-steam-id-links.html/default.htm" rel="prev">查找CSGO职业选手的Steam、社交媒体账号</a></span>
+                <span class="article-nav-next">下一篇<br><a href="../magisk-pro-setting.html/default.htm" rel="next">Magisk鼠标键盘外设、视频设置、准心CFG参数</a></span>
+            </nav>
+        
+				<div class="relates"><div class="title"><h3>推荐</h3></div><ul><li><a href="../csgo-workshop-map-mirage-plus.html/default.htm">创意工坊地图推荐：荒漠迷城+</a></li><li><a href="../csgo-case-operationoperation-release-order-time.html/default.htm">CSGO已推出的武器箱、大行动更新时间列表【新增印花胶囊】</a></li><li><a href="../csgo-removed-map-chlorine.html/default.htm">被移除的CSGO地图：科洛林</a></li><li><a href="../csgo-workshop-map-palais.html/default.htm">CSGO搭档地图推荐：Palais</a></li><li><a href="../csgo-update-2022-12-17.html/default.htm">CSGO 2022年12月17日更新日志「多张地图改进」</a></li></ul></div>					</div>
+	</div>
+	<div class="sidebar">
+<div class="widget widget_ui_posts"><h3>置顶推荐</h3><ul><li><a target="_blank" href="../csgo-map-agent-lab.html/default.htm"><span class="thumbnail"><img data-src="../wp-content/uploads/2021/02/agentlab2021-1-220x150.png" alt="CSGO 探员、刀子、音乐盒 体验地图：Agent Lab-CSGO RushB中文网" src="../wp-content/uploads/2021/02/agentlab2021-1-220x150.png" class="thumb"></span><span class="text">CSGO 探员、刀子、音乐盒 体验地图：Agent Lab</span><span class="muted">2021-02-20</span></a></li>
+<li><a target="_blank" href="../csgo-all-give-commands.html/default.htm"><span class="thumbnail"><img data-src="../wp-content/uploads/2020/03/csgogive-220x150.png" alt="CSGO武器、装备Give获取控制台指令【2022版】-CSGO RushB中文网" src="../wp-content/uploads/2020/03/csgogive-220x150.png" class="thumb"></span><span class="text">CSGO武器、装备Give获取控制台指令【2022版】</span><span class="muted">2020-03-21</span></a></li>
+<li><a target="_blank" href="../csgo-name-change-font.html/default.htm"><span class="thumbnail"><img data-src="../wp-content/uploads/2019/03/namefont-220x150.png" alt="CSGO玩家名称/武器改名卡使用花体、斜体等特殊字体方法-CSGO RushB中文网" src="../wp-content/uploads/2019/03/namefont-220x150.png" class="thumb"></span><span class="text">CSGO玩家名称/武器改名卡使用花体、斜体等特殊字体方法</span><span class="muted">2019-09-14</span></a></li>
+</ul></div><div class="widget widget_ui_posts"><h3>热门文章</h3><ul class="nopic"><li><a target="_blank" href="../csgo-removed-map-chlorine.html/default.htm"><span class="text">被移除的CSGO地图：科洛林</span><span class="muted">2022-12-31</span></a></li>
+<li><a target="_blank" href="../csgo-map-village.html/default.htm"><span class="text">CSGO地图推荐：Village</span><span class="muted">2019-07-09</span></a></li>
+<li><a target="_blank" href="../electronic-pro-setting.html/default.htm"><span class="text">electronic鼠标键盘外设、视频设置、准心CFG参数</span><span class="muted">2019-08-26</span></a></li>
+<li><a target="_blank" href="../csgo-offline-map-128tick.html/default.htm"><span class="text">CSGO本地地图（单机模式）开启128tick教程</span><span class="muted">2022-04-21</span></a></li>
+<li><a target="_blank" href="../csgo-storage-unit.html/default.htm"><span class="text">关于CSGO物品：库存存储组件</span><span class="muted">2020-03-11</span></a></li>
+</ul></div></div></section>
+
+
+<footer class="footer">
+	<div class="container">
+							<div class="fcode">
+				<a style="font-size:14px;" target="_blank" rel="nofollow" href="../connect/default.htm">
+<b>网站合作 联系本站</b>
+</a>
+ | 
+<a style="font-size:14px;" target="_blank" rel="nofollow" href="https://space.bilibili.com/94932139">
+<b>哔哩哔哩</b>
+</a>
+ | 
+<a style="font-size:14px;" target="_blank" rel="nofollow" href="https://qm.qq.com/cgi-bin/qm/qr?k=z_I1QfkdNuHbU5-W_0CIl0Aj23CReWJk&authKey=i5Cz7gyim0EJ6uwdsa%2BPPabXVZd%2BowFT2yjyw5x6g%2BdtLzPfq4jBpLWVIzndVz5q&noverify=0&group_code=97574671https://qm.qq.com/cgi-bin/qm/qr?k=z_I1QfkdNuHbU5-W_0CIl0Aj23CReWJk&authKey=i5Cz7gyim0EJ6uwdsa%2BPPabXVZd%2BowFT2yjyw5x6g%2BdtLzPfq4jBpLWVIzndVz5q&noverify=0&group_code=97574671">
+<b>QQ群 97574671</b>
+</a>
+			</div>
+				<p>&copy; 2023 <a href="../default.htm">CSGO RushB中文网</a> &nbsp; <a href="../sitemap.xml">网站地图</a>
+</p>
+		<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?f66fd8235142d9ab480f67b9d46e106f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>	</div>
+</footer>
+
+
+
+<script>
+window.jsui={
+	www: '..',
+	uri: '../wp-content/themes/dux/default.htm',
+	ver: '5.1',
+	roll: ["1","2"],
+	ajaxpager: '0',
+	url_rp: '../connect/default.htm'
+};
+</script>
+<script type='text/javascript' src='https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js?ver=5.1'></script>
+<script type='text/javascript' src='../wp-content/themes/dux/js/loader.jsver5.1.js'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min.jsver4.9.22.js'></script>
+</body>
+</html>
