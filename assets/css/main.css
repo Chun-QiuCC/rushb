@@ -21,7 +21,7 @@ body {
     background-attachment: fixed;
     background-position: 50% 50%;
     background-color: #818181;
-    background-image: url('/assets/img/csgo1.jpg');
+    background-image: url('https://img.ousetonae.com/other/csgo1.jpg');
 }
 #rin-bg:after {
     top: 0;
