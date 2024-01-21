@@ -1,0 +1,498 @@
+<!DOCTYPE html><!-- saved from url=(0047)https://www.rushb.net/csgo-bind-buy/default.htm --><meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link rel="shortcut icon" href="../favicon.ico" />
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="This tool will help you bind commands to rapidly buy weapons in CS:GO. Created by Outpox"/>
+    <title>CSGO一键购买武器控制台代码生成器</title>
+	<link rel="shortcut icon" href="../wp-content/uploads/2018/10/favicon.ico" />
+	<meta name="keywords" content="csgo, 一键买枪, 一键购买, 代码, 控制台, 脚本, 指令, 绑定, 命令, 生成器, 武器">
+	<meta name="description" content="本页面工具CSGO一键购买武器控制台代码生成器将帮助你编辑为多个不同按键分开绑定购买武器/装备控制台代脚本代码，实现一键购买武器装备，快速加入战斗。">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+</head>
+<body>
+<header>
+    <p>&nbsp;&nbsp;<a target="_blank" href="../default.htm" title="RushB中文网">RushB中文网</a></p>
+    <p id="title">CSGO一键购买武器代码生成器</p>
+
+    <div id="version">
+
+        <p id="home_msg">
+            本页面工具将帮助你编辑为多个不同按键分开绑定购买武器/装备控制台代脚本代码。
+			<br/>先点击选中要绑定的按键，然后点击要购买的武器、投掷物、装备。
+			<br/>一个按键可同时绑定主武器、手枪和多个投掷物、装备。
+			<br/>
+			<br/>部分共用装备槽位武器代码通用，比如AK47/M4A4/M4A1-S，玩家只要给键位绑定其中一个即可，无需分开设置，比如CT时购买的是M4，T则是购买AK47。
+			<br/>本工具详细使用教程请看<a target="_blank" href="../csgo-bind-buy-tool-way.html/default.htm" title="CSGO一键购买武器代码生成器使用教程">https://www.rushb.net/csgo-bind-buy-tool-way.html</a>
+    </div>
+</header>
+
+<div id="container">
+
+    <div class="keyboard">
+        <div class="kb_up">
+            <div class="arrow_home">
+                <div class="home">
+                    <table>
+                        <tr>
+                            <td>Insert<span>ins</span></td>
+                            <td>Home</td>
+                            <td>Pg Up<span>pgup</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delete<span>del</span></td>
+                            <td>End</td>
+                            <td>Pg Down<span>pgdn</span></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="arrow">
+                    <table>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>↑<span>uparrow</span></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td>←<span>leftarrow</span></td>
+                            <td>↓<span>downarrow</span></td>
+                            <td>→<span>rightarrow</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="numpad">
+                <table>
+                    <tr>
+                        <td>Num Lock<span>numlock</span></td>
+                        <td>/<span>kp_slash</span></td>
+                        <td>*<span>kp_multiply</span></td>
+                        <td>-<span>kp_minus</span></td>
+                    </tr>
+                    <tr>
+                        <td>7<span>kp_home</span></td>
+                        <td>8<span>kp_uparrow</span></td>
+                        <td>9<span>kp_pgup</span></td>
+                        <td rowspan="2">+<span>kp_plus</span></td>
+                    </tr>
+                    <tr>
+                        <td>4<span>kp_leftarrow</span></td>
+                        <td>5<span>kp_5</span></td>
+                        <td>6<span>kp_rightarrow</span></td>
+                    </tr>
+                    <tr>
+                        <td>1<span>kp_end</span></td>
+                        <td>2<span>kp_downarrow</span></td>
+                        <td>3<span>kp_pgdn</span></td>
+                        <td rowspan="2">Enter<span>kp_enter</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">0<span>kp_ins</span></td>
+                        <td>.<span>kp_del</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="output">
+                <span id="reset" class="span-btn">清空代码</span><span id="copy" class="span-btn">全选代码</span>
+                <textarea id="text-result" class="result" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="kb_down">
+            <div class="main">
+                <table>
+                    <tr>
+                        <td>F1</td>
+                        <td>F2</td>
+                        <td>F3</td>
+                        <td>F4</td>
+                        <td>F5</td>
+                        <td>F6</td>
+                        <td>F7</td>
+                        <td>F8</td>
+                        <td>F9</td>
+                        <td>F10</td>
+                        <td>F11</td>
+                        <td>F12</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>`</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>=</td>
+                        <td>Backspace</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Tab</td>
+                        <td>Q</td>
+                        <td>W</td>
+                        <td>E</td>
+                        <td>R</td>
+                        <td>T</td>
+                        <td>Y</td>
+                        <td>U</td>
+                        <td>I</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>[</td>
+                        <td>]</td>
+                        <td>\</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>CapsLock</td>
+                        <td>A</td>
+                        <td>S</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>;</td>
+                        <td>'</td>
+                        <td>Enter</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Shift</td>
+                        <td>Z</td>
+                        <td>X</td>
+                        <td>C</td>
+                        <td>V</td>
+                        <td>B</td>
+                        <td>N</td>
+                        <td>M</td>
+                        <td>,</td>
+                        <td>.</td>
+                        <td>/</td>
+                        <td>Shift</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Ctrl</td>
+                        <td class="empty"></td>
+                        <td>Alt</td>
+                        <td id="space">Space</td>
+                        <td>Alt</td>
+                        <td class="empty"></td>
+                        <td>Ctrl</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<div id="menu">
+    <div id="selectdiv">
+        <span id="pselect">已选按键：<span id="selectedkey"></span></span>
+    </div>
+    <div id="resetdiv">
+        <button id="resetkey">清除此按键</button>
+    </div>
+    <hr/>
+    <div id="customText">
+        <span>自定义代码：</span><textarea name="custom" id="customTextArea" cols="60" rows="1"></textarea>
+    </div>
+    <hr/>
+    <div id="primary">
+        <form id="primaryform">
+            <div class="toggle-btn">
+                <span>步枪：</span>
+                <button id="disrifle">收起</button>
+            </div>
+            <div id="rifles">
+                <ul class='img-list'>
+					<li>
+                        <input id="m4a4" type="radio" name='primaryradio' value="buy m4a1;"/>
+                        <label for="m4a4">
+                            <img src="img/weapons/weapon_m4a1.png" title="M4A4/M4A1消音版/AK-4" alt="M4A4/M4A1消音版/AK-47"/>
+                        </label>
+                    </li>
+					 <li>
+                        <input id="famas" type="radio" name='primaryradio' value="buy famas;"/>
+                        <label for="famas">
+                            <img src="img/weapons/weapon_famas.png" title="法玛斯/加利尔 AR" alt="法玛斯/加利尔 AR"/>
+                        </label>
+                    </li>
+					<li>
+                        <input id="aug" type="radio" name='primaryradio' value="buy aug;"/>
+                        <label for="aug">
+                            <img src="img/weapons/weapon_aug.png" title="AUG/SG 553" alt="AUG/SG 553"/>
+                        </label>
+                    </li>
+					<li>
+                        <input id="scout" type="radio" name='primaryradio' value="buy ssg08;"/>
+                        <label for="scout">
+                            <img src="img/weapons/weapon_ssg08.png" title="SSG 08" alt="SSG 08"/>
+                        </label>
+                    </li>					
+                    <li>
+                        <input id="awp" type="radio" name='primaryradio' value="buy awp;"/>
+                        <label for="awp">
+                            <img src="img/weapons/weapon_awp.png" title="AWP" alt="AWP"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="scar20" type="radio" name='primaryradio' value="buy scar20;"/>
+                        <label for="scar20">
+                            <img src="img/weapons/weapon_scar20.png" title="SCAR 20/G3SG1" alt="SCAR 20/G3SG1"/>
+                        </label>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="toggle-btn">
+                <span>微型冲锋枪：</span>
+                <button id="dissmg">收起</button>
+            </div>
+
+            <div id="smgs">
+                <ul class='img-list'>
+                    <li>
+                        <input id="mp9" type="radio" name='primaryradio' value="buy mp9;"/>
+                        <label for="mp9">
+                            <img src="img/weapons/weapon_mp9.png" title="MP9/MAC-10" alt="MP9/MAC-10"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="mp7" type="radio" name='primaryradio' value="buy mp7;"/>
+                        <label for="mp7">
+                            <img src="img/weapons/weapon_mp7.png" title="MP7/MP5-SD" alt="MP7/MP5-SD"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="ump" type="radio" name='primaryradio' value="buy ump45;"/>
+                        <label for="ump">
+                            <img src="img/weapons/weapon_ump45.png" title="UMP-45" alt="UMP-45"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="bizon" type="radio" name='primaryradio' value="buy bizon;"/>
+                        <label for="bizon">
+                            <img src="img/weapons/weapon_bizon.png" title="PP-野牛" alt="PP-野牛"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="p90" type="radio" name='primaryradio' value="buy p90;"/>
+                        <label for="p90">
+                            <img src="img/weapons/weapon_p90.png" title="P90" alt="P90"/>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="toggle-btn">
+                <span>重型武器：</span>
+                <button id="disheavy">收起</button>
+            </div>
+
+            <div id="heavy">
+                <ul class='img-list'>
+                    <li>
+                        <input id="nova" type="radio" name='primaryradio' value="buy nova;"/>
+                        <label for="nova">
+                            <img src="img/weapons/weapon_nova.png" title="新星" alt="新星"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="xm1014" type="radio" name='primaryradio' value="buy xm1014;"/>
+                        <label for="xm1014">
+                            <img src="img/weapons/weapon_xm1014.png" title="XM-1014" alt="XM-1014"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="mag7" type="radio" name='primaryradio' value="buy mag7;"/>
+                        <label for="mag7">
+                            <img src="img/weapons/weapon_mag7.png" title="MAG-7/截短霰弹枪" alt="MAG-7/截短霰弹枪"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="m249" type="radio" name='primaryradio' value="buy m249;"/>
+                        <label for="m249">
+                            <img src="img/weapons/weapon_m249.png" title="M249" alt="M249"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="negev" type="radio" name='primaryradio' value="buy negev;"/>
+                        <label for="negev">
+                            <img src="img/weapons/weapon_negev.png" title="内格夫" alt="内格夫"/>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <hr/>
+    <div class="toggle-btn">
+        <span>手枪：</span>
+        <button id="dissecondary">收起</button>
+    </div>
+
+    <form id="secondaryform">
+        <div id="gun">
+            <ul class='img-list'>
+				<li>
+                    <input id="dual" type="radio" name='secondary' value="buy elite;"/>
+                    <label for="dual">
+                        <img src="img/weapons/weapon_elite.png" title="双持贝瑞塔" alt="双持贝瑞塔"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="p250" type="radio" name='secondary' value="buy p250;"/>
+                    <label for="p250">
+                        <img src="img/weapons/weapon_p250.png" title="P250" alt="P250"/>
+                    </label>
+                </li>                
+                <li>
+                    <input id="fiveseven" type="radio" name='secondary' value="buy fn57;"/>
+                    <label for="fiveseven">
+                        <img src="img/weapons/weapon_fn57.png" title="FN57/Tec-9/CZ75自动手枪" alt="FN57/Tec-9/CZ75自动手枪"/>
+                    </label>
+
+                </li>
+                <li>
+                    <input id="deagle" type="radio" name='secondary' value="buy deagle;"/>
+                    <label for="deagle">
+                        <img src="img/weapons/weapon_deagle.png" title="沙漠之鹰/R8左轮手枪" alt="沙漠之鹰/R8左轮手枪"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <hr/>
+    <div class="toggle-btn">
+        <span>手雷：</span>
+        <button id="disgre">收起</button>
+    </div>
+
+    <form id="greform">
+        <div id="grenades">
+				<p>如果要一键购买两颗闪光弹，则下方两个闪光弹图片都要选中。</p>
+            <ul class='img-list'>
+                <li>
+                    <input id="hegrenade" type="checkbox" name='grenade' value="buy hegrenade;"/>
+                    <label for="hegrenade">
+                        <img src="img/weapons/weapon_hegrenade.png" title="高爆手雷" alt="高爆手雷"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="flash" type="checkbox" name='grenade' value="buy flashbang;"/>
+                    <label for="flash">
+                        <img src="img/weapons/weapon_flashbang.png" title="闪光震撼弹" alt="闪光震撼弹"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="flash2" type="checkbox" name='grenade' value="buy flashbang;"/>
+                    <label for="flash2">
+                        <img src="img/weapons/weapon_flashbang.png" title="闪光震撼弹" alt="闪光震撼弹"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
+                    <label for="smoke">
+                        <img src="img/weapons/weapon_smokegrenade.png" title="烟雾弹" alt="烟雾弹"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="decoy" type="checkbox" name='grenade' value="buy decoy;"/>
+                    <label for="decoy">
+                        <img src="img/weapons/weapon_decoy.png" title="诱饵手雷" alt="诱饵手雷"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="incendiary" type="checkbox" name='grenade' value="buy incgrenade;"/>
+                    <label for="incendiary">
+                        <img src="img/weapons/weapon_incgrenade.png" title="燃烧弹/燃烧瓶" alt="燃烧弹/燃烧瓶"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <hr/>
+    <div class="toggle-btn">
+        <span>装备：</span>
+        <button id="disother">收起</button>
+    </div>
+
+    <form id="equipform">
+        <div id="equipment">
+		<p>拆弹器等于人质模式的营救工具包。<br/>建议半甲和全甲绑定在一起，这样手枪局买半甲，金钱足够买全甲。
+            <ul class='img-list'>
+                <li>
+                    <input id="kevlar" type="checkbox" name='other' value="buy vest;"/>
+                    <label for="kevlar">
+                        <img src="img/weapons/equipment_kevlar.png" title="防弹背心" alt="防弹背心"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="kevlarhelm" type="checkbox" name='other' value="buy vesthelm;"/>
+                    <label for="kevlarhelm">
+                        <img src="img/weapons/equipment_kevlarhelmet.png" title="防弹背心+头盔" alt="防弹背心+头盔"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="defuse" type="checkbox" name='other' value="buy defuser;"/>
+                    <label for="defuse">
+                        <img src="img/weapons/equipment_defusekit.png" title="拆弹器" alt="拆弹器"/>
+                    </label>
+
+                </li>
+                <li>
+                    <input id="taser" type="checkbox" name='other' value="buy taser;"/>
+                    <label for="taser">
+                        <img src="img/weapons/weapon_taser.png" title="宙斯X27电击枪" alt="宙斯X27电击枪"/>
+                    </label>
+
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+<footer>
+
+
+    <p>作者 <a href="../../www.reddit.com/user/outpox/default.htm">/u/Outpox</a></p>
+
+</footer>
+<script type="text/javascript" src="js/keyhandler.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "../../httpshm.baidu.com/hm.jsf66fd8235142d9ab480f67b9d46e106f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
