@@ -3,6 +3,7 @@
     margin: auto;
     /*text-align: center;*/ 
     margin-top: calc(50vh - 200px);
+    margin-bottom: calc(50vh - 200px);;
 }
 @media (max-width: 900px){
     #rin-main {
