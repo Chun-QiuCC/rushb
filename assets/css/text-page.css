@@ -2,8 +2,8 @@
     width: 900px;
     margin: auto;
     /*text-align: center;*/ 
-    margin-top: calc(50vh - 100px);
-    margin-bottom: calc(50vh - 100px);;
+    margin-top: calc(25vh - 100px);
+    margin-bottom: calc(25vh - 100px);;
 }
 @media (max-width: 900px){
     #rin-main {
