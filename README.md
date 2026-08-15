@@ -9,11 +9,21 @@
 <br>  
 
 # ↓点击下方链接进入镜像站首页↓
-## [https://www.rushb.net.cn](https://www.rushb.net.cn)
+## [https://www.rushb.net.cn/mirrors/default.htm](https://www.rushb.net.cn/mirrors/default.htm)
 
 <br>
 
----
+---  
+<br>
+  
+## 2026-8-15 更新日志 
+ - 移除了由OuseTonae维护的失效CDN资源，替换为本地资源
+ - 将主站从 Cloudflare Page 迁移至 EdgeOne 以提升中国大陆内的访问速度
+ - 修复上方镜像站首页链接
+
+<br>
+
+---  
 
 <br>
 
