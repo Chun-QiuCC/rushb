@@ -14,8 +14,10 @@
 <br>
 
 ---  
-<br>
-  
+<br>  
+
+## 2026-8-18 更新日志 
+ - 由于 EdgeOne 无法容纳镜像站的大小，从 EdgeOne 切回 Cloudflare Page   
 ## 2026-8-15 更新日志 
  - 移除了由OuseTonae维护的失效CDN资源，替换为本地资源
  - 将主站从 Cloudflare Page 迁移至 EdgeOne 以提升中国大陆内的访问速度
